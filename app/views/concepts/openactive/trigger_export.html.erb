@@ -1,0 +1,6 @@
+<div style="display: flex; justify-content: center;">
+  <div style="max-width: 600px; width: 100%; border: 1px solid #ccc; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 50px;">
+    <h1>Publish <%= ENV['VOCAB_NAME'] %></h1>
+    <p>Publishing initiated successfully! If changes have been made since the last time this button was pressed, you should <a href="<%= ENV['VOCAB_RELEASES_URL'] %>" target="_blank">see the changes published</a> within 5 minutes. Please see <a href="https://github.com/openactive/<%= ENV['VOCAB_IDENTIFIER'] %>/actions/workflows/create-and-merge-pr.yaml" target="_blank">the latest workflow run</a> for an update on publishing status.</p>
+  </div>
+</div>

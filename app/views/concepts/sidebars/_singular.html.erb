@@ -11,15 +11,13 @@
 
   <% if defined?(concept) %>
     <%= sidebar_header 'Contribute' %>
-    <%= sidebar_item :icon => 'link', :text => 'Suggest amendment', :path => 'https://docs.google.com/forms/d/e/1FAIpQLSfaKgMC-dySy8G7Lvv_9Uh-o48Db37B3BwHSHANyPlEpiEmFA/viewform?usp=pp_url&entry.1516405934=Suggest+an+edit+to+an+existing+term&entry.357421241=' + ERB::Util.url_encode(concept.pref_label.to_s) %>
-    <%= sidebar_item :icon => 'link', :text => 'Suggest new activity', :path => 'https://docs.google.com/forms/d/e/1FAIpQLSfaKgMC-dySy8G7Lvv_9Uh-o48Db37B3BwHSHANyPlEpiEmFA/viewform?usp=pp_url&entry.1516405934=Suggest+a+new+activity' %>
-    <%= sidebar_item :icon => 'link', :text => 'General feedback', :path => 'https://docs.google.com/forms/d/e/1FAIpQLSfaKgMC-dySy8G7Lvv_9Uh-o48Db37B3BwHSHANyPlEpiEmFA/viewform?usp=pp_url&entry.1516405934=Give+general+feedback' %>
+    <%= sidebar_item :icon => 'link', :text => 'Suggestions, updates and feedback', :path => ENV['VOCAB_SUGGESTIONS_FORM'] %>
   <% end %>
 
   <%= sidebar_header 'Links' %>
   <% if defined?(concept) %>
     <!-- <%= sidebar_item :icon => 'link', :text => t('txt.models.concept.uri'), :path => rdf_url(concept.origin, :format => nil, :published => published_param, :lang => nil) %> -->
-    <%= sidebar_item :icon => 'link', :text => 'Concept @id', :path => 'https://openactive.io/activity-list#' + CGI.escapeHTML(concept.origin[1..-1]) %>
+    <%= sidebar_item :icon => 'link', :text => 'Concept @id', :path => "https://openactive.io/#{ENV['VOCAB_IDENTIFIER']}##{CGI.escapeHTML(concept.origin[1..-1])}" %>
   <% end %>
 
   <% (Iqvoc.first_level_classes - [Collection::SKOS::Unordered]).each do |klass| %>

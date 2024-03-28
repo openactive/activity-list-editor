@@ -7,7 +7,7 @@
   <% end %>
   </p>
 
-  <p class="concept-item-uri">https://openactive.io/activity-list#<%= CGI.escapeHTML(result.concept.origin[1..-1]) %></p>
+  <p class="concept-item-uri">https://openactive.io/<%= ENV['VOCAB_IDENTIFIER'] %>#<%= CGI.escapeHTML(result.concept.origin[1..-1]) %></p>
   <% if result.definition? %>
     <p class="concept-item-definition" lang="<%= result.definition.language %>">
       <%= result.definition.value %>

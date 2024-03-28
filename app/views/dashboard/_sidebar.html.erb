@@ -4,7 +4,7 @@
     <%= sidebar_item { render(klass.new_link_partial_name) } %>
   <% end %>
   <%= sidebar_header 'Extras' %>
-  <%= sidebar_item :icon => :link, :text => 'OpenActive Export', :path => openactive_concepts_path(:format => :jsonld) %>
+  <%= sidebar_item :icon => :link, :text => 'Publish to OpenActive', :path => confirm_export_path(:format => :html) %>
   <%= sidebar_item(:icon => :upload, :text => t('txt.views.dashboard.import'),
     :path => imports_path, :active => params[:controller] == 'imports', :perms => [:import, Concept::Base]) %>
 

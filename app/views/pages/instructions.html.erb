@@ -1,6 +1,6 @@
 <%= page_header :title => "Instructions for Editing" %>
-<h2>Editing the Activity List</h2>
-<p>Broadly speaking, editing the Activity List involves four stages.</p>
+<h2>Editing the <%= ENV['VOCAB_NAME'] %></h2>
+<p>Broadly speaking, editing the <%= ENV['VOCAB_NAME'] %> involves four stages.</p>
 <ol>
   <li>Finding the activity in the List (or selecting to add a new one)</li>
   <li>Making the changes you wish to the activity</li>
@@ -10,27 +10,27 @@
 </ol>
 <p>The instructions below walk you through this process, depending on the nature of the change (Creating a new activity, editing an existing activity, or deleting an activity from the List) you wish to make.</p>
 <br></br>
-<h3><b>Viewing the Activity List</b></h3>
-<p>For most purposes the easiest way to view the Activity List is to click on the 'Concepts' tab. This will display a hierarchical view of the Activity List - that is to say, more-specific terms are listed under more general terms. For example, 'Small-sides Football' is listed under 'Football', and in turn contains terms such as '5-a-side', '6-a-side', etc.</p>
+<h3><b>Viewing the <%= ENV['VOCAB_NAME'] %></b></h3>
+<p>For most purposes the easiest way to view the <%= ENV['VOCAB_NAME'] %> is to click on the 'Concepts' tab. This will display a hierarchical view of the <%= ENV['VOCAB_NAME'] %> - that is to say, more-specific terms are listed under more general terms. For example, 'Small-sides Football' is listed under 'Football', and in turn contains terms such as '5-a-side', '6-a-side', etc.</p>
 <p>To expand a hierarchical term, click on the small '+' icon beside it; to hide the more-specific terms, click on the '-' icon. Clicking on the magnifying glass icon to the right of a term will bring up more details about it - for example, a definition of the term, if one is recorded in the system.
   <br></br>
 <h4>Finding a specific activity</h4>
 <p>The hierarchical nature of the list can sometimes make finding an activity hard: how do you know which top-level terms you need to expand in order to find the lower-level activity?</p>
-<p>In such cases, using 'Basic Find' to search for an activity by name can be extremely helpful. Given the relatively small (<700 items) size of the Activity List, it is not usually necessary to use the Advanced Search functionality, though it is there if desired.</p>
+<p>In such cases, using 'Basic Find' to search for an activity by name can be extremely helpful. Given the relatively small (<700 items) size of the <%= ENV['VOCAB_NAME'] %>, it is not usually necessary to use the Advanced Search functionality, though it is there if desired.</p>
 <br></br>
 <h4><b>A note on Collections</b></h4>
-<p>Collections functionality is not currently used in any systematic way by OpenActive. Accordingly the Collections view provides only a very partial and fragmented view of the Activity List, and is not recommended for current use.</p>
+<p>Collections functionality is not currently used in any systematic way by OpenActive. Accordingly the Collections view provides only a very partial and fragmented view of the <%= ENV['VOCAB_NAME'] %>, and is not recommended for current use.</p>
 <p>The role of Collections may change in future, but for the present their use should be avoided.<p>
 <br></br>
 <h3><b>Adding a New Activity</b></h3>
 <p>To add a new activity, use the top horizontal navigation bar to navigate to 'Concepts'; then, in the right-hand navigation bar, click 'New Concept'. This will bring you to the New Concept page, where you can add your new activity.</p>
-<p>Although there are many fields that can be used to define your new activity, there are only a few that are required for it to appear in the activity list</p>
+<p>Although there are many fields that can be used to define your new activity, there are only a few that are required for it to appear in the <%= ENV['VOCAB_NAME'] %></p>
 <br></br>
 <h4><b>Labels</b></h4>
 <p>This is the human-readable label that will be displayed to end-users. 'EN' refers to English-language labels; 'DE' to German-language labels. For current purposes, only the first must be supplied.</p>
 <br></br>
 <h4><b>Relations</b></h4>
-<p>The important field here is 'Broader Term' - that is to say, the existing term in the current hierarchy that your new activity should sit under. For instance, if you were adding 'Rugby Union' to the Activity List, the 'Broader Term' would be the existing 'Rugby' activity.</p>
+<p>The important field here is 'Broader Term' - that is to say, the existing term in the current hierarchy that your new activity should sit under. For instance, if you were adding 'Rugby Union' to the <%= ENV['VOCAB_NAME'] %>, the 'Broader Term' would be the existing 'Rugby' activity.</p>
 <p>If there is no broader term for your new activity - i.e., it forms a its own top-level category at the top of the hierarchy - tick the 'Top Term' box.</p>
 <p>The 'Related Terms' field can be ignored.</p>
 <br></br>
@@ -57,8 +57,8 @@
 <p>Your modified activity is now ready for export.</p>
 <br></br>
 <h3><b>Removing an Activity</b></h3>
-<p>Strictly speaking, the Activity List Editor (and the underlying iqvoc editor it is based on) does not have the concept of deleting a concept, as this could lead to broken links, etc.</p>
-<p>As a result, it is vitally important to check with downstream users of the Activity List (e.g. imin) to make sure they are adequately prepared for any scheduled deletions.</p> 
+<p>Strictly speaking, the <%= ENV['VOCAB_NAME'] %> Editor (and the underlying iqvoc editor it is based on) does not have the concept of deleting a concept, as this could lead to broken links, etc.</p>
+<p>As a result, it is vitally important to check with downstream users of the <%= ENV['VOCAB_NAME'] %> (e.g. imin) to make sure they are adequately prepared for any scheduled deletions.</p> 
 <p>Once removal of an activity from the List has been agreed, the procedure for doing so runs as follows:</p>
 <ol>
   <li>Find the activity you wish to modify, possibly using Basic Find</li>
@@ -69,22 +69,17 @@
   <li>Click 'Save'</li>
   <li>Click 'Publish'</li>
 </ol>
-<p>The activity will no longer appear in the Activity List, though a record remains in the database for retrieval if required.</p>
+<p>The activity will no longer appear in the <%= ENV['VOCAB_NAME'] %>, though a record remains in the database for retrieval if required.</p>
 <p>Your modified List is now ready for export.</p>
 <br></br>
-<h3><b>Exporting the New Activity List</b></h3>
-<p>Once you have made all the changes you need to the Activity List, it is time to export the list for use by other systems. To do so:</p>
+<h3><b>Exporting the New <%= ENV['VOCAB_NAME'] %></b></h3>
+<p>Once you have made all the changes you need to the <%= ENV['VOCAB_NAME'] %>, it is time to export the list for use by other systems. To do so:</p>
 <ol>
   <li>Navigate to the 'Dashboard' (top navigation bar)</li>
-  <li>Click 'OpenActive Export' (left-hand navigation bar)</li>
+  <li>Click 'Publish to OpenActive' (left-hand navigation bar)</li>
 </ol>
-<p>After a pause of a few seconds, you should see a JSON rendering of the Activity List on your screen. This is an indication that the Activity List has been correctly processed, validated, and published by the Editor, and can now be used by systems downstream.</p>
+<p>After a pause of a few seconds, you should see a JSON rendering of the <%= ENV['VOCAB_NAME'] %> on your screen. This is an indication that the <%= ENV['VOCAB_NAME'] %> has been correctly processed, validated, and published by the Editor, and can now be used by systems downstream.</p>
 <p>If you do not receive JSON feedback, or receive an error message, email <a href="mailto:services@openactive.io">services@openactive.io</a> to report the fault - along, if desired, with a list of the changes you were hoping to make to the List.</p>
 <h4>For developers: confirming that changes have been exported</h4>
-<p>The export process works by pushing the updated JSON displayed on screen to the GitHub <a href="https://github.com/openactive/activity-list">openactive/activity-list</a> repository. More specifically:</p>
-<ol>
-  <li>the JSON is written to the <code>unvalidated_activity_list.jsonld</code> file</li>
-  <li>a <a href="https://github.com/openactive/activity-list/tree/master/.github/workflows">GitHub Workflow</a> validates the well-formedness of the file</li>
-  <li>if the file passes these checks, it is then written to <code>activity-list.jsonld</code>, where it will be available to downstream implementations using the file</li>
-  <li>if the file fails the checks, <code>activity-list.jsonld</code> is left untouched. The reason for the failure can be found by reviewing the <a href="https://github.com/openactive/activity-list/actions">Actions</a> history.</li>
-</ol>
+<p>The export process works by triggering a workflow in the GitHub <a href="https://github.com/openactive/<%= ENV['VOCAB_IDENTIFIER'] %>">openactive/<%= ENV['VOCAB_IDENTIFIER'] %></a> repository. Please see the README of that repository for more information.</p>
+

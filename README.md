@@ -1,8 +1,8 @@
-# Activity List Editor 
+# SKOS Vocabulary Editor 
 
 ## Coding framework: iQvoc
 
-The Activity List Editor is a fork of iQvoc, a vocabulary management tool that combines easy-to-use human interfaces
+The OpenActive SKOS Vocabulary Editor is a fork of iQvoc, a vocabulary management tool that combines easy-to-use human interfaces
 with Semantic Web interoperability. For more information about iQvoc, including setup and configuration, please see the [iQvoc GitHub repository](https://github.com/innoq/iqvoc).
 
 ## Using the Editor

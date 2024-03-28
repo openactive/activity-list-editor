@@ -1,7 +1,7 @@
 <%= sidebar do %>
   <% if defined?(collection) %>
     <%= sidebar_header 'Contribute' %>
-    <%= sidebar_item :icon => 'link', :text => 'General feedback', :path => 'https://docs.google.com/forms/d/e/1FAIpQLSfaKgMC-dySy8G7Lvv_9Uh-o48Db37B3BwHSHANyPlEpiEmFA/viewform?usp=pp_url&entry.1516405934=Give+general+feedback' %>
+    <%= sidebar_item :icon => 'link', :text => 'Suggestions, updates and feedback', :path => ENV['VOCAB_SUGGESTIONS_FORM'] %>
   <% end %>
 
   <% if defined?(collection) %>
@@ -10,7 +10,7 @@
     <!-- <%= sidebar_item :icon => 'share', :text => 'RDF/XML', :path => rdf_url(collection.origin, :format => :rdf, :lang => nil), :id => 'rdf_link_xml' %> -->
     <!-- <%= sidebar_item :icon => 'share', :text => 'RDF/Turtle', :path => rdf_url(collection.origin, :format => :ttl, :lang => nil), :id => 'rdf_link_ttl' %> -->
     <!-- <%= sidebar_item :icon => 'share', :text => 'RDF/NTriples', :path => rdf_url(collection.origin, :format => :nt, :lang => nil), :id => 'rdf_link_nt' %> -->
-    <%= sidebar_item :icon => 'share', :text => 'JSON-LD', :path => "https://openactive.io/activity-list/collections/#{collection.origin[1..-1]}.jsonld", :id => 'link_jsonld' %>
+    <%= sidebar_item :icon => 'share', :text => 'JSON-LD', :path => "https://openactive.io/#{ENV['VOCAB_IDENTIFIER']}/collections/#{collection.origin[1..-1]}.jsonld", :id => 'link_jsonld' %>
   <% end %>
 
   <% if can?(:create, Iqvoc::Collection.base_class) %>

@@ -1,0 +1,13 @@
+<div style="display: flex; justify-content: center;">
+  <div style="max-width: 600px; width: 100%; border: 1px solid #ccc; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 50px;">
+    <h1>Publish <%= ENV['VOCAB_NAME'] %></h1>
+    <p>Do you want to publish a new version of the OpenActive <%= ENV['VOCAB_NAME'] %>?</p>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <%= form_tag(trigger_export_path, method: :post, style: "display: flex; flex: 1;") do %>
+        <%= hidden_field_tag :confirm, 'yes' %>
+        <%= submit_tag 'Confirm', style: "margin-right: 10px;" %>
+      <% end %>
+      <%= link_to 'Cancel', dashboard_path, style: "flex-shrink: 0;" %>
+    </div>
+  </div>
+</div>

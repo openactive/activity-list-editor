@@ -32,10 +32,6 @@ class PagesController < ApplicationController
   def intro
   end
 
-  def changelog
-#    authorize! :read, :version
-  end
-
   def instructions
 #    authorize! :read, :version
   end

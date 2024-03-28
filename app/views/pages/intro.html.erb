@@ -1,17 +1,15 @@
-<%= page_header :title => "OpenActive Activity List" %>
-The OpenActive Activity List is a standardised list of physical activities widely practiced in the UK. Its intent is to improve the accuracy and findability of physical activities by provinding standardised labels and identifiers for all the activities it contains. It is collaboratively maintained by the community of the UK's activity providers, and aims as far as possible to be reliable, comprehensive, and complete.<br><br>
+<%= page_header :title => "OpenActive #{ ENV['VOCAB_NAME'] }" %>
+<%= ENV['VOCAB_DESCRIPTION'] %><br><br>
 <ul style="list-style: none;">
-<li><a href="/en/hierarchical_concepts.html">View Activity List</a></li>
-<li><a href="/en/basic_find.html">Search Activity List</a></li>
+<li><a href="/en/hierarchical_concepts.html">View <%= ENV['VOCAB_NAME'] %></a></li>
+<li><a href="/en/basic_find.html">Search <%= ENV['VOCAB_NAME'] %></a></li>
 </ul>
-<h2>Contributing to the Activity List</h2>
-If you would like to propose activities to be added to the list - or if you believe you have spotted an error in or necessary improvement to the list - please use the suggestion form below.<br><br>
+<h2>Contributing to the OpenActive <%= ENV['VOCAB_NAME'] %></h2>
+If you would like to propose additions to the list - or if you believe you have spotted an error in or necessary improvement to the list - please use the suggestion form below.<br><br>
 <ul style="list-style: none;">
-<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfaKgMC-dySy8G7Lvv_9Uh-o48Db37B3BwHSHANyPlEpiEmFA/viewform">Suggest, update, or feedback on, an activity</a></li>
-</ul><!--
-<h2>Activity List Governance</h2>
-The OpenActive Activity List Committee, a collection of individuals and organisations who maintain this list, is currently being formalised and is open for applications. This page is a placeholder until the formalised committee is established, and we welcome any contributions you have via the links above for their consideration.<br><br> -->
+<li><a href="<%= ENV['VOCAB_SUGGESTIONS_FORM'] %>">Suggestions for, updates to, or feedback on, the list</a></li>
+</ul>
 <h2>Developer Access</h2>
-A <a href="https://openactive.io/activity-list/activity-list.jsonld">JSON-LD definition</a> of the OpenActive Activity List controlled vocabulary is available for live integration into applications.<br><br>
-This controlled vocabulary SHOULD be retrieved frequently using an HTTP GET and cached within an application, to ensure that the most up-to-date version is displayed to the user, while also protecting against network failure when accessing the underlying resource. To access this controlled vocabulary the application MUST GET the URL <code class="highlighter-rouge">"https://openactive.io/activity-list/activity-list.jsonld"</code> (note there is no www in the URL) which does not require a specific <code class="highlighter-rouge">Accept</code> header, and is cached via CDN. The controlled vocabulary is also available via a GET of the URL <code class="highlighter-rouge">"https://openactive.io/activity-list"</code> using an <code class="highlighter-rouge">Accept</code> header of <code class="highlighter-rouge">application/ld+json</code>, for completeness, however this shorter URL MUST NOT be used in production.<br><br>
-For more information, see the <a href="https://developer.openactive.io/publishing-data/activity-list-references">developer site</a>.
+A <a href="https://openactive.io/<%= ENV['VOCAB_IDENTIFIER'] %>/<%= ENV['VOCAB_IDENTIFIER'] %>.jsonld">JSON-LD definition</a> of the OpenActive <%= ENV['VOCAB_NAME'] %> controlled vocabulary is available for live integration into applications.<br><br>
+This controlled vocabulary SHOULD be retrieved frequently using an HTTP GET and cached within an application, to ensure that the most up-to-date version is displayed to the user, while also protecting against network failure when accessing the underlying resource. To access this controlled vocabulary the application MUST GET the URL <code class="highlighter-rouge">"https://openactive.io/<%= ENV['VOCAB_IDENTIFIER'] %>/<%= ENV['VOCAB_IDENTIFIER'] %>.jsonld"</code> (note there is no www in the URL) which does not require a specific <code class="highlighter-rouge">Accept</code> header, and is cached via CDN. The controlled vocabulary is also available via a GET of the URL <code class="highlighter-rouge">"https://openactive.io/<%= ENV['VOCAB_IDENTIFIER'] %>"</code> using an <code class="highlighter-rouge">Accept</code> header of <code class="highlighter-rouge">application/ld+json</code>, for completeness, however this shorter URL MUST NOT be used in production.<br><br>
+For more information, see the <a href="<%= ENV['VOCAB_HELP_URL'] %>">developer site</a>.

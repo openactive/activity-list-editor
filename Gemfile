@@ -47,6 +47,7 @@ gem 'carrierwave'
 gem 'autoprefixer-rails', '~> 6.5.1.1'
 gem 'daemons'
 gem "octokit", "~> 4.0"
+gem 'rubyzip', '~> 2.0'
 
 # database adapters
 # comment out those you do don't need or use a different Gemfile
